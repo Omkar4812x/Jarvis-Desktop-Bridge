@@ -1,0 +1,83 @@
+#hud {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 22% 1fr 22%;
+  grid-template-rows: 1fr auto;
+  padding: 24px;
+  gap: 20px;
+}
+
+/* PANELS */
+aside, footer {
+  border: 1px solid rgba(127,252,255,0.2);
+  padding: 14px;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* SYSTEM LOG */
+#system-log ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#system-log li {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  animation: fadeLog 30s linear forwards;
+}
+
+/* CORE */
+#core {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arc-core {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed rgba(127,252,255,0.3);
+}
+
+.outer { animation: rotateSlow 60s linear infinite; }
+.mid   { inset: 20px; animation: rotateSlowReverse 90s linear infinite; }
+.inner { inset: 45px; border-style: solid; }
+
+.pulse {
+  position: absolute;
+  inset: 80px;
+  border-radius: 50%;
+  background: rgba(127,252,255,0.15);
+  animation: pulse 6s ease-in-out infinite;
+}
+
+/* ANALYTICS */
+.holo-panel {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba(127,252,255,0.25);
+}
+
+/* CONSOLE */
+#console {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  opacity: 0.6;
+}

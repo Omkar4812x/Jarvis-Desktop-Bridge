@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JARVIS :: System Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/hud.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+
+
+</head>
+
+<body>
+  <!-- Background Layers -->
+  <div class="bg-grid"></div>
+  <div class="bg-energy"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-noise"></div>
+
+  <!-- HUD -->
+  <div id="hud">
+
+    <!-- LEFT : SYSTEM LOG -->
+    <aside id="system-log">
+      <h3>SYSTEM STATUS</h3>
+      <ul id="log-list"></ul>
+    </aside>
+
+    <!-- CENTER : ARC CORE -->
+    <main id="core">
+      <div class="arc-core">
+        <div class="ring outer"></div>
+        <div class="ring mid"></div>
+        <div class="ring inner"></div>
+        <div class="pulse"></div>
+      </div>
+    </main>
+
+    <!-- RIGHT : ANALYTICS -->
+    <aside id="analytics">
+      <h3>ANALYTICS</h3>
+
+      <div class="holo-panel">
+        <canvas id="graph1"></canvas>
+      </div>
+
+      <div class="holo-panel">
+        <canvas id="graph2"></canvas>
+      </div>
+    </aside>
+
+    <!-- BOTTOM : CONSOLE -->
+    <footer id="console">
+      <span>&gt; JARVIS ONLINE</span>
+    </footer>
+
+  </div>
+
+
+<script src="js/ui/brain.js"></script>
+
+
+
+  <!-- JS -->
+  <script src="js/ui/sysLog.js"></script>
+  <script src="js/ui/hologram.js"></script>
+  <script src="js/ui/sound.js"></script>
+  <script src="js/ui/coreState.js"></script>
+  <script src="js/ui/console.js"></script>
+  <script src="js/ui/brain.js"></script>
+  <script src="js/ui/voice.js"></script>
+  
+
+</body>
+</html>

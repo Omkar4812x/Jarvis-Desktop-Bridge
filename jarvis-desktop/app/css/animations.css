@@ -1,0 +1,88 @@
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes rotateSlowReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.4; }
+  50%     { opacity: 0.8; }
+}
+
+@keyframes fadeLog {
+  0% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes energyFlow {
+  from { background-position-y: 0; }
+  to   { background-position-y: 100%; }
+}
+
+/* VOICE STATE ANIMATIONS */
+
+/* Listening state - subtle intensity increase */
+@keyframes listeningPulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(127, 252, 255, 0.3);
+    border-color: rgba(127, 252, 255, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(127, 252, 255, 0.6);
+    border-color: rgba(127, 252, 255, 0.7);
+  }
+}
+
+/* Wake word reaction - brief bright pulse */
+@keyframes wakeReact {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(127, 252, 255, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(127, 252, 255, 0.8);
+  }
+  100% { 
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(127, 252, 255, 0.4);
+  }
+}
+
+/* Processing state - focused steady glow */
+@keyframes processingGlow {
+  0%, 100% { 
+    background: rgba(127, 252, 255, 0.15);
+    box-shadow: 0 0 25px rgba(127, 252, 255, 0.4);
+  }
+  50% { 
+    background: rgba(127, 252, 255, 0.25);
+    box-shadow: 0 0 35px rgba(127, 252, 255, 0.6);
+  }
+}
+
+/* State-specific core styles */
+.state-listening .ring {
+  animation: listeningPulse 2s ease-in-out infinite;
+}
+
+.state-processing .pulse {
+  animation: processingGlow 1.5s ease-in-out infinite;
+}
+
+.wake-react {
+  animation: wakeReact 1s ease-out;
+}
+
+/* Body state classes for global effects */
+.voice-listening {
+  --core-intensity: 1.2;
+}
+
+.voice-processing {
+  --core-intensity: 1.5;
+}
